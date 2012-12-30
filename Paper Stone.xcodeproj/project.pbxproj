@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D51D529168F36C700ED09AA /* PSChunkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D51D528168F36C700ED09AA /* PSChunkManager.m */; };
+		3D6FF5371690AB1F00F2E6E7 /* CZGPerlinGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6FF5361690AB1F00F2E6E7 /* CZGPerlinGenerator.m */; };
+		3D6FF53F1690B4E200F2E6E7 /* Shader.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 3D6FF53D1690B4E200F2E6E7 /* Shader.fsh */; };
+		3D6FF5401690B4E200F2E6E7 /* Shader.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 3D6FF53E1690B4E200F2E6E7 /* Shader.vsh */; };
+		3D6FF5411690B4EF00F2E6E7 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3D6FF53D1690B4E200F2E6E7 /* Shader.fsh */; };
+		3D6FF5421690B4EF00F2E6E7 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 3D6FF53E1690B4E200F2E6E7 /* Shader.vsh */; };
 		3DB124E9168E2BE900295593 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB124E8168E2BE900295593 /* UIKit.framework */; };
 		3DB124EB168E2BE900295593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB124EA168E2BE900295593 /* Foundation.framework */; };
 		3DB124ED168E2BE900295593 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB124EC168E2BE900295593 /* CoreGraphics.framework */; };
@@ -16,9 +22,21 @@
 		3DB124FB168E2BE900295593 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB124FA168E2BE900295593 /* Default.png */; };
 		3DB124FD168E2BE900295593 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB124FC168E2BE900295593 /* Default@2x.png */; };
 		3DB124FF168E2BE900295593 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB124FE168E2BE900295593 /* Default-568h@2x.png */; };
+		3DB12506168E2C0700295593 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB12505168E2C0700295593 /* QuartzCore.framework */; };
+		3DB12508168E2C0C00295593 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB12507168E2C0C00295593 /* GLKit.framework */; };
+		3DB1250A168E2C1100295593 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB12509168E2C1100295593 /* OpenGLES.framework */; };
+		3DB1250D168E2C5E00295593 /* PSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB1250C168E2C5E00295593 /* PSViewController.m */; };
+		3DB1250F168E2C7800295593 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB1250E168E2C7800295593 /* Storyboard.storyboard */; };
+		3DB12512168E2E6C00295593 /* PSChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB12511168E2E6C00295593 /* PSChunk.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D51D527168F36C700ED09AA /* PSChunkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSChunkManager.h; sourceTree = "<group>"; };
+		3D51D528168F36C700ED09AA /* PSChunkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSChunkManager.m; sourceTree = "<group>"; };
+		3D6FF5351690AB1F00F2E6E7 /* CZGPerlinGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZGPerlinGenerator.h; sourceTree = "<group>"; };
+		3D6FF5361690AB1F00F2E6E7 /* CZGPerlinGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZGPerlinGenerator.m; sourceTree = "<group>"; };
+		3D6FF53D1690B4E200F2E6E7 /* Shader.fsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		3D6FF53E1690B4E200F2E6E7 /* Shader.vsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
 		3DB124E4168E2BE900295593 /* Paper Stone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paper Stone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB124E8168E2BE900295593 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3DB124EA168E2BE900295593 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,6 +50,14 @@
 		3DB124FA168E2BE900295593 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3DB124FC168E2BE900295593 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3DB124FE168E2BE900295593 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3DB12505168E2C0700295593 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3DB12507168E2C0C00295593 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		3DB12509168E2C1100295593 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3DB1250B168E2C5E00295593 /* PSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSViewController.h; sourceTree = "<group>"; };
+		3DB1250C168E2C5E00295593 /* PSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSViewController.m; sourceTree = "<group>"; };
+		3DB1250E168E2C7800295593 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		3DB12510168E2E6C00295593 /* PSChunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSChunk.h; sourceTree = "<group>"; };
+		3DB12511168E2E6C00295593 /* PSChunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSChunk.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB1250A168E2C1100295593 /* OpenGLES.framework in Frameworks */,
+				3DB12508168E2C0C00295593 /* GLKit.framework in Frameworks */,
+				3DB12506168E2C0700295593 /* QuartzCore.framework in Frameworks */,
 				3DB124E9168E2BE900295593 /* UIKit.framework in Frameworks */,
 				3DB124EB168E2BE900295593 /* Foundation.framework in Frameworks */,
 				3DB124ED168E2BE900295593 /* CoreGraphics.framework in Frameworks */,
@@ -48,6 +77,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D6FF5341690AAED00F2E6E7 /* Noise Generator */ = {
+			isa = PBXGroup;
+			children = (
+				3D6FF5351690AB1F00F2E6E7 /* CZGPerlinGenerator.h */,
+				3D6FF5361690AB1F00F2E6E7 /* CZGPerlinGenerator.m */,
+			);
+			name = "Noise Generator";
+			sourceTree = "<group>";
+		};
+		3D6FF5381690B49B00F2E6E7 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				3D6FF53D1690B4E200F2E6E7 /* Shader.fsh */,
+				3D6FF53E1690B4E200F2E6E7 /* Shader.vsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
 		3DB124D9168E2BE800295593 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +115,9 @@
 		3DB124E7168E2BE900295593 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DB12509168E2C1100295593 /* OpenGLES.framework */,
+				3DB12507168E2C0C00295593 /* GLKit.framework */,
+				3DB12505168E2C0700295593 /* QuartzCore.framework */,
 				3DB124E8168E2BE900295593 /* UIKit.framework */,
 				3DB124EA168E2BE900295593 /* Foundation.framework */,
 				3DB124EC168E2BE900295593 /* CoreGraphics.framework */,
@@ -78,9 +128,18 @@
 		3DB124EE168E2BE900295593 /* Paper Stone */ = {
 			isa = PBXGroup;
 			children = (
+				3D6FF5381690B49B00F2E6E7 /* Shaders */,
+				3D6FF5341690AAED00F2E6E7 /* Noise Generator */,
+				3DB124EF168E2BE900295593 /* Supporting Files */,
 				3DB124F7168E2BE900295593 /* PSAppDelegate.h */,
 				3DB124F8168E2BE900295593 /* PSAppDelegate.m */,
-				3DB124EF168E2BE900295593 /* Supporting Files */,
+				3DB1250B168E2C5E00295593 /* PSViewController.h */,
+				3DB1250C168E2C5E00295593 /* PSViewController.m */,
+				3DB12510168E2E6C00295593 /* PSChunk.h */,
+				3DB12511168E2E6C00295593 /* PSChunk.m */,
+				3D51D527168F36C700ED09AA /* PSChunkManager.h */,
+				3D51D528168F36C700ED09AA /* PSChunkManager.m */,
+				3DB1250E168E2C7800295593 /* Storyboard.storyboard */,
 			);
 			path = "Paper Stone";
 			sourceTree = "<group>";
@@ -151,10 +210,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6FF5411690B4EF00F2E6E7 /* Shader.fsh in Resources */,
+				3D6FF5421690B4EF00F2E6E7 /* Shader.vsh in Resources */,
 				3DB124F3168E2BE900295593 /* InfoPlist.strings in Resources */,
 				3DB124FB168E2BE900295593 /* Default.png in Resources */,
 				3DB124FD168E2BE900295593 /* Default@2x.png in Resources */,
 				3DB124FF168E2BE900295593 /* Default-568h@2x.png in Resources */,
+				3DB1250F168E2C7800295593 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +229,12 @@
 			files = (
 				3DB124F5168E2BE900295593 /* main.m in Sources */,
 				3DB124F9168E2BE900295593 /* PSAppDelegate.m in Sources */,
+				3DB1250D168E2C5E00295593 /* PSViewController.m in Sources */,
+				3DB12512168E2E6C00295593 /* PSChunk.m in Sources */,
+				3D51D529168F36C700ED09AA /* PSChunkManager.m in Sources */,
+				3D6FF5371690AB1F00F2E6E7 /* CZGPerlinGenerator.m in Sources */,
+				3D6FF53F1690B4E200F2E6E7 /* Shader.fsh in Sources */,
+				3D6FF5401690B4E200F2E6E7 /* Shader.vsh in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,10 +305,12 @@
 		3DB12503168E2BE900295593 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Paper Stone/Paper Stone-Prefix.pch";
 				INFOPLIST_FILE = "Paper Stone/Paper Stone-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -248,10 +318,12 @@
 		3DB12504168E2BE900295593 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Paper Stone/Paper Stone-Prefix.pch";
 				INFOPLIST_FILE = "Paper Stone/Paper Stone-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -275,6 +347,7 @@
 				3DB12504168E2BE900295593 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

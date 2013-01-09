@@ -8,6 +8,7 @@
 
 #import "PSViewController.h"
 #import "PSChunkManager.h"
+#import "PSSphere.h"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
@@ -101,6 +102,7 @@ GLfloat gCubeVertexData[216] =
     GLuint _vertexBuffer;
     
     PSChunkManager *chunkManager;
+    PSSphere *sphere;
 }
 @property (nonatomic, strong) EAGLContext *context;
 @property (strong) GLKBaseEffect *effect;
@@ -133,6 +135,7 @@ GLfloat gCubeVertexData[216] =
     [self setupGL];
 
     chunkManager = [[PSChunkManager alloc] initWithEffect:self.effect];
+    sphere = [[PSSphere alloc] initAtPosition:GLKVector3Make(0, 20, 0) Radius:5 Effect:self.effect];
 }
 
 - (void)dealloc
@@ -175,10 +178,36 @@ GLfloat gCubeVertexData[216] =
     [self loadShaders];
     
     self.effect = [[GLKBaseEffect alloc] init];
+    //self.effect.light0.enabled = GL_TRUE;
+    //self.effect.light0.diffuseColor = GLKVector4Make(1.0f, 0.4f, 0.7f, 1.0f);
+    
+    // Turn on the first light
     self.effect.light0.enabled = GL_TRUE;
-    self.effect.light0.diffuseColor = GLKVector4Make(1.0f, 0.4f, 0.4f, 1.0f);
+    self.effect.light0.diffuseColor = GLKVector4Make(1.0f, 1.f, 1.f, 1.0f);
+    self.effect.light0.position = GLKVector4Make(-1.f, -1.f, 2.f, 1.0f);
+    self.effect.light0.specularColor = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
+    self.effect.light0.ambientColor = GLKVector4Make(.2, .2, .2, 1.0);
+
+    // Turn on the second light
+    self.effect.light1.enabled = GL_TRUE;
+    self.effect.light1.diffuseColor = GLKVector4Make(.4f, 0.4f, 0.4f, 1.0f);
+    self.effect.light1.position = GLKVector4Make(15.f, 15.f, 15.f, 1.0f);
+    self.effect.light1.specularColor = GLKVector4Make(1.0f, 0.0f, 0.0f, 1.0f);
+
+    /*
+    // Set material
+    self.effect.material.diffuseColor = GLKVector4Make(1.f, 1.f, 1.0f, 1.0f);
+    self.effect.material.ambientColor = GLKVector4Make(1.f, 1.f, 1.f, 1.0f);
+    self.effect.material.specularColor = GLKVector4Make(1.0f, 0.0f, 0.0f, 1.0f);
+    self.effect.material.shininess = 320.0f;
+    self.effect.material.emissiveColor = GLKVector4Make(0.4f, 0.4, 0.4f, 1.0f);
+    */
+    
+    
     
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
+    
     /*
     glGenVertexArraysOES(1, &_vertexArray);
     glBindVertexArrayOES(_vertexArray);
@@ -195,7 +224,7 @@ GLfloat gCubeVertexData[216] =
     glBindVertexArrayOES(0);
     */
     
-    _eyePosition = GLKVector3Make(10, 30, 50);
+    _eyePosition = GLKVector3Make(10, 30, 30);
     _lookAtPosition = GLKVector3Make(0, 0, 0);
     _upVector = GLKVector3Make(0, 1, 0);
     
@@ -323,6 +352,7 @@ GLfloat gCubeVertexData[216] =
     */
 
     [chunkManager update:self.timeSinceLastUpdate WithCameraPosition:_eyePosition CameraView:_lookAtPosition];
+    [sphere update:self.timeSinceLastUpdate];
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
@@ -346,6 +376,7 @@ GLfloat gCubeVertexData[216] =
     */
     
     [chunkManager render];
+    [sphere render];
 }
 
 #pragma mark -  OpenGL ES 2 shader compilation

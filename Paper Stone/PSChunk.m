@@ -137,6 +137,8 @@ GLfloat gBlockVertexData[216] =
 
 - (void)setupGL
 {
+    glEnable(GL_CULL_FACE);
+    
     glGenVertexArraysOES(1, &_vertexArray);
     glBindVertexArrayOES(_vertexArray);
     

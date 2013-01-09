@@ -28,6 +28,8 @@
 		3DB1250D168E2C5E00295593 /* PSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB1250C168E2C5E00295593 /* PSViewController.m */; };
 		3DB1250F168E2C7800295593 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB1250E168E2C7800295593 /* Storyboard.storyboard */; };
 		3DB12512168E2E6C00295593 /* PSChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB12511168E2E6C00295593 /* PSChunk.m */; };
+		3DF698151690D62800A5494E /* PSPhysicEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF698141690D62800A5494E /* PSPhysicEngine.m */; };
+		3DF698191690D63E00A5494E /* PSSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF698181690D63E00A5494E /* PSSphere.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,10 @@
 		3DB1250E168E2C7800295593 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		3DB12510168E2E6C00295593 /* PSChunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSChunk.h; sourceTree = "<group>"; };
 		3DB12511168E2E6C00295593 /* PSChunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSChunk.m; sourceTree = "<group>"; };
+		3DF698131690D62800A5494E /* PSPhysicEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPhysicEngine.h; sourceTree = "<group>"; };
+		3DF698141690D62800A5494E /* PSPhysicEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPhysicEngine.m; sourceTree = "<group>"; };
+		3DF698171690D63E00A5494E /* PSSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSphere.h; sourceTree = "<group>"; };
+		3DF698181690D63E00A5494E /* PSSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSphere.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,10 @@
 				3D51D527168F36C700ED09AA /* PSChunkManager.h */,
 				3D51D528168F36C700ED09AA /* PSChunkManager.m */,
 				3DB1250E168E2C7800295593 /* Storyboard.storyboard */,
+				3DF698131690D62800A5494E /* PSPhysicEngine.h */,
+				3DF698141690D62800A5494E /* PSPhysicEngine.m */,
+				3DF698171690D63E00A5494E /* PSSphere.h */,
+				3DF698181690D63E00A5494E /* PSSphere.m */,
 			);
 			path = "Paper Stone";
 			sourceTree = "<group>";
@@ -235,6 +245,8 @@
 				3D6FF5371690AB1F00F2E6E7 /* CZGPerlinGenerator.m in Sources */,
 				3D6FF53F1690B4E200F2E6E7 /* Shader.fsh in Sources */,
 				3D6FF5401690B4E200F2E6E7 /* Shader.vsh in Sources */,
+				3DF698151690D62800A5494E /* PSPhysicEngine.m in Sources */,
+				3DF698191690D63E00A5494E /* PSSphere.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

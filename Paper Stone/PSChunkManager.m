@@ -9,8 +9,8 @@
 #import "PSChunkManager.h"
 #import "PSChunk.h"
 
-#define NUM_CHUNKS_PER_FRAME 64
-#define CHUNK_WIDTH 64
+#define NUM_CHUNKS_PER_FRAME 128
+#define CHUNK_WIDTH 32 // 64 is at the limit
 #define WORLD_WIDTH 1
 #define VISIBLE_RADIUS 512
 
